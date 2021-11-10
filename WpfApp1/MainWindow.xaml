@@ -14,26 +14,25 @@
                     <GridViewColumn Header="Descripció" Width="120" DisplayMemberBinding="{Binding Descripcio}"/>
                     <GridViewColumn Header="Responsable" Width="120" DisplayMemberBinding="{Binding Responsable}"/>
                     <GridViewColumn Header="Prioritat" Width="120" DisplayMemberBinding="{Binding Prioritat}"/>
-                    <GridViewColumn Header="Data Incici" Width="120" DisplayMemberBinding="{Binding Data_final}"/>
-                    <GridViewColumn Header="Columna 1" Width="120" DisplayMemberBinding="{Binding Columna1}"/>
+                    <GridViewColumn Header="Data Inici" Width="120" DisplayMemberBinding="{Binding ata_Inici}"/>
+                    <GridViewColumn Header="Data Final" Width="120" DisplayMemberBinding="{Binding Data_final}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button Name="btn_agregar" Content="Agregar" HorizontalAlignment="Left" Margin="486,115,0,0" VerticalAlignment="Top" Click="btn_agregar_Click" Height="44" Width="56"/>
         <Button Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="577,114,0,0" VerticalAlignment="Top" Click="btn_modificar_Click" Height="44" Width="65"/>
         <Button Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="674,115,0,0" VerticalAlignment="Top" Click="btn_eliminar_Click" Height="44" Width="55"/>
-        <Label Name="lbl_name" Content="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,45,0,0"/>
+        <Label Name="lbl_name" Content="Nom" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,45,0,0"/>
         <Label Name="lbl_responsable" Content="Responsable" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,102,0,0"/>
         <Label Name="lbl_descripcio" Content="Descripcio" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_data_inici" Content="Data Inici" HorizontalAlignment="Left" Margin="20,133,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_data_final" Content="Data Final" HorizontalAlignment="Left" Margin="20,159,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_prioritat" Content="Prioritat" HorizontalAlignment="Left" Margin="22,191,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txt_nomTasca" HorizontalAlignment="Left" Margin="132,49,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txt_responsable" HorizontalAlignment="Left" Margin="132,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txt_descripcio" HorizontalAlignment="Left" Margin="132,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txt_data_inici" HorizontalAlignment="Left" Margin="132,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txt_data_final" HorizontalAlignment="Left" Margin="132,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txt_prioritat" HorizontalAlignment="Left" Margin="132,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txt_data_inici2" HorizontalAlignment="Left" Margin="324,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Label Name="lbl_data_inici" Content="Data Inici" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_data_final" Content="Data Final" HorizontalAlignment="Left" Margin="20,182,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_prioritat" Content="Prioritat" HorizontalAlignment="Left" Margin="22,133,0,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="2"  Name="txt_nomTasca" HorizontalAlignment="Left" Margin="132,49,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox TabIndex="4" Name="txt_descripcio" HorizontalAlignment="Left" Margin="132,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox TabIndex="3" Name="txt_responsable" HorizontalAlignment="Left" Margin="132,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox TabIndex="5" Name="txt_data_inici" HorizontalAlignment="Left" Margin="132,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox TabIndex="6" Name="txt_data_final" HorizontalAlignment="Left" Margin="132,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox TabIndex="7" Name="txt_prioritat" HorizontalAlignment="Left" Margin="132,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
