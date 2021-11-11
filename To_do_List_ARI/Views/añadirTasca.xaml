@@ -7,7 +7,33 @@
         mc:Ignorable="d"
         Title="añadirTasca" Height="450" Width="800">
     <Grid>
-        <ListView Margin="10,238,10,25" Name="lvTasca">
+        <Grid x:Name="Grid_emplenar_dades" VerticalAlignment="Top" HorizontalAlignment="Left" Height="179" Width="375">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Name="lbl_name" Content="Nom"  Grid.Row="0" Grid.Column="0"/>
+            <Label Name="lbl_responsable" Content="Responsable"  Grid.Row="1" Grid.Column="0"/>
+            <Label Name="lbl_descripcio" Content="Descripcio" Grid.Row="2" Grid.Column="0"/>
+            <Label Name="lbl_data_inici" Content="Data Inici" Grid.Row="3" Grid.Column="0"/>
+            <Label Name="lbl_data_final" Content="Data Final" Grid.Row="4" Grid.Column="0"/>
+            <Label Name="lbl_prioritat" Content="Prioritat" Grid.Row="5" Grid.Column="0"/>
+            <TextBox TabIndex="2"  Name="txt_nomTasca" Grid.Row="0" Grid.Column="1"/>
+            <TextBox TabIndex="3" Name="txt_responsable" Grid.Row="1" Grid.Column="1"/>
+            <TextBox TabIndex="4" Name="txt_descripcio" Grid.Row="2" Grid.Column="1"/>
+            <TextBox TabIndex="5" Name="txt_data_inici" Grid.Row="3" Grid.Column="1"/>
+            <TextBox TabIndex="6" Name="txt_data_final" Grid.Row="4" Grid.Column="1"/>
+            <TextBox TabIndex="7" Name="txt_prioritat" Grid.Row="5" Grid.Column="1"/>
+        </Grid>
+        <ListView Margin="10,238,60,25" Name="lvTasca">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nom" Width="120" DisplayMemberBinding="{Binding Name}"/>
@@ -22,17 +48,6 @@
         <Button Name="btn_agregar" Content="Agregar" HorizontalAlignment="Left" Margin="486,115,0,0" VerticalAlignment="Top" Click="btn_agregar_Click" Height="44" Width="56"/>
         <Button Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="577,114,0,0" VerticalAlignment="Top" Click="btn_modificar_Click" Height="44" Width="65"/>
         <Button Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="674,115,0,0" VerticalAlignment="Top" Click="btn_eliminar_Click" Height="44" Width="55"/>
-        <Label Name="lbl_name" Content="Nom" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,45,0,0"/>
-        <Label Name="lbl_responsable" Content="Responsable" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,102,0,0"/>
-        <Label Name="lbl_descripcio" Content="Descripcio" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_data_inici" Content="Data Inici" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_data_final" Content="Data Final" HorizontalAlignment="Left" Margin="20,182,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_prioritat" Content="Prioritat" HorizontalAlignment="Left" Margin="22,133,0,0" VerticalAlignment="Top"/>
-        <TextBox TabIndex="2"  Name="txt_nomTasca" HorizontalAlignment="Left" Margin="132,49,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox TabIndex="4" Name="txt_descripcio" HorizontalAlignment="Left" Margin="132,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox TabIndex="3" Name="txt_responsable" HorizontalAlignment="Left" Margin="132,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox TabIndex="5" Name="txt_data_inici" HorizontalAlignment="Left" Margin="132,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox TabIndex="6" Name="txt_data_final" HorizontalAlignment="Left" Margin="132,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox TabIndex="7" Name="txt_prioritat" HorizontalAlignment="Left" Margin="132,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btn_netejar" Content="Netejar" HorizontalAlignment="Left" Margin="515,186,0,0" VerticalAlignment="Top" Height="27" Width="107" Click="btn_netejar_Click"/>
     </Grid>
 </Window>
