@@ -23,35 +23,28 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-
         }
+        
         //quan l'usuari clica sobre el button afegir
         private void btn_agregar_Click(object sender, RoutedEventArgs e)
         {
             //afageix un nou item al listview
-            lvTasca.Items.Add(new Tasca()
-            {
-                Name = txt_nomTasca.Text,
-                Responsable = txt_responsable.Text,
-                Descripcio = txt_descripcio.Text,
-                Prioritat = txt_prioritat.Text,
-                ata_Inici = txt_data_inici.Text,
-                Data_final = txt_data_final.Text
+            lvTasca.Items.Add(new Tasca() { Name = txt_nomTasca.Text, 
+                                            Responsable = txt_responsable.Text, 
+                                            Descripcio = txt_descripcio.Text,                                          
+                                            Prioritat = txt_prioritat.Text,
+                                            ata_Inici = txt_data_inici.Text,
+                                            Data_final = txt_data_final.Text                                          
             });
             //buida els camps
-            /*txt_nomTasca.Text = "";
-            txt_responsable.Text = "";
-            txt_descripcio.Text = "";
-            txt_prioritat.Text = "";
-            txt_data_final.Text = "";
-            txt_data_inici.Text = "";*/
+            
         }
 
         private void btn_modificar_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
-
+        
         // quan l'usuari clica sobre el button eliminar
         private void btn_eliminar_Click(object sender, RoutedEventArgs e)
         {
@@ -61,10 +54,11 @@ namespace WpfApp1
                 lvTasca.Items.RemoveAt(lvTasca.SelectedIndex);
             }
             catch (Exception)
-            {
+            { 
                 MessageBox.Show("Has de seleccionar una tasca", "Informacio", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
 
         public class Tasca
         {
@@ -75,5 +69,17 @@ namespace WpfApp1
             public string Prioritat { get; set; }
             public string ata_Inici { get; set; } //si poso data_inici em dona errors per iaxo he possat ata inici
         }
+
+        //metode per netejar els camps
+        public void netejaCamps()
+        {
+             /*txt_nomTasca.Text = "";
+             txt_responsable.Text = "";
+             txt_descripcio.Text = "";
+             txt_prioritat.Text = "";
+             txt_data_final.Text = "";
+             txt_data_inici.Text = "";*/
+        }
+
     }
 }
