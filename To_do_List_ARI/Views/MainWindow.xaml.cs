@@ -24,5 +24,11 @@ namespace To_do_List_ARI
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            añadirTasca t = new añadirTasca();
+            t.Show();
+        }
     }
 }

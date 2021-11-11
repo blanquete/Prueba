@@ -9,7 +9,7 @@
     <Grid>
         <Menu  HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <MenuItem Header="Creación tasca">
-                <MenuItem Header="Añadi una tasca"/>
+                <MenuItem Header="Añadi una tasca" Click="MenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="Modificar">
                 <MenuItem Header="Modificar Tasca"/>
