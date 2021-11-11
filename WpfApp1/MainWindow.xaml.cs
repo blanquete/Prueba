@@ -29,20 +29,37 @@ namespace WpfApp1
         private void btn_agregar_Click(object sender, RoutedEventArgs e)
         {
             //afageix un nou item al listview
-            lvTasca.Items.Add(new Tasca() { Name = txt_nomTasca.Text, 
-                                            Responsable = txt_responsable.Text, 
-                                            Descripcio = txt_descripcio.Text,                                          
-                                            Prioritat = txt_prioritat.Text,
-                                            ata_Inici = txt_data_inici.Text,
-                                            Data_final = txt_data_final.Text                                          
+            lvTasca.Items.Add(new Tasca() { 
+                Name = txt_nomTasca.Text, 
+                Responsable = txt_responsable.Text, 
+                Descripcio = txt_descripcio.Text,                                          
+                Prioritat = txt_prioritat.Text,
+                ata_Inici = txt_data_inici.Text,
+                Data_final = txt_data_final.Text                                          
             });
             //buida els camps
-            
+            netejaCamps();
+
+
         }
 
         private void btn_modificar_Click(object sender, RoutedEventArgs e)
         {
-           
+
+            Tasca tasca_mod = new Tasca();
+
+            //modiifca l'item seleccionat del listview
+            lvTasca.SelectedItem = 
+            {
+                Name = txt_nomTasca.Text,
+                Responsable = txt_responsable.Text,
+                Descripcio = txt_descripcio.Text,
+                Prioritat = txt_prioritat.Text,
+                ata_Inici = txt_data_inici.Text,
+                Data_final = txt_data_final.Text
+            });
+            //buida els camps
+            netejaCamps();
         }
         
         // quan l'usuari clica sobre el button eliminar
@@ -73,13 +90,18 @@ namespace WpfApp1
         //metode per netejar els camps
         public void netejaCamps()
         {
-             /*txt_nomTasca.Text = "";
-             txt_responsable.Text = "";
-             txt_descripcio.Text = "";
-             txt_prioritat.Text = "";
-             txt_data_final.Text = "";
-             txt_data_inici.Text = "";*/
+
+            txt_nomTasca.Text = "";
+            txt_responsable.Text = "";
+            txt_descripcio.Text = "";
+            txt_prioritat.Text = "";
+            txt_data_final.Text = "";
+            txt_data_inici.Text = "";
         }
 
+        private void btn_netejar_Click(object sender, RoutedEventArgs e)
+        {
+            netejaCamps();
+        }
     }
 }
