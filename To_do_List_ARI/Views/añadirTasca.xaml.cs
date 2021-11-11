@@ -72,6 +72,11 @@ namespace To_do_List_ARI
             public string Prioritat { get; set; }
             public string ata_Inici { get; set; } //si poso data_inici em dona errors per iaxo he possat ata inici
         }
+
+        private void btn_netejar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
